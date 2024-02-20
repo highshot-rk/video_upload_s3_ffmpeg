@@ -2045,3 +2045,46 @@ Processing by VideoController#show as HTML
 Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.6ms | Allocations: 4069)
 
 
+Started GET "/video/new" for ::1 at 2024-02-20 08:00:09 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2888)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 7498)
+Completed 200 OK in 22ms (Views: 10.1ms | ActiveRecord: 3.1ms | Allocations: 14762)
+
+
+Started POST "/video" for ::1 at 2024-02-20 08:02:13 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample", "video"=>#<ActionDispatch::Http::UploadedFile:0x00007f3b2819f068 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-27911-1x62u5u.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mVideo Create (0.9ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample"], ["video", "sample.mp4"], ["created_at", "2024-02-20 13:02:13.912486"], ["updated_at", "2024-02-20 13:02:13.912486"]]
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:52:in `transcode_and_upload_video'
+  [1m[36mVideo Update (0.8ms)[0m  [1m[33mUPDATE "videos" SET "updated_at" = $1, "s3_url" = $2 WHERE "videos"."id" = $3[0m  [["updated_at", "2024-02-20 13:02:21.470873"], ["s3_url", "https://gcc-vault-staging.s3.amazonaws.com/output.mp4"], ["id", 29]]
+  ↳ app/controllers/video_controller.rb:52:in `transcode_and_upload_video'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:52:in `transcode_and_upload_video'
+Redirected to http://localhost:3000/video/29
+Completed 302 Found in 7567ms (ActiveRecord: 4.7ms | Allocations: 194217)
+
+
+Started GET "/video/29" for ::1 at 2024-02-20 08:02:21 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 144)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 3111)
+Completed 200 OK in 14ms (Views: 10.3ms | ActiveRecord: 1.0ms | Allocations: 4641)
+
+
