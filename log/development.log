@@ -1,0 +1,2047 @@
+Started GET "/" for ::1 at 2024-02-20 04:21:47 -0500
+  
+ActiveRecord::NoDatabaseError (connection to server at "127.0.0.1", port 5432 failed: FATAL:  database "video_streaming_test" does not exist
+):
+  
+activerecord (6.1.7.6) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (6.1.7.6) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (6.1.7.6) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (6.1.7.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.7.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.7.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.7.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.7.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.7.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.7.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.7.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.7.6) lib/active_record/connection_handling.rb:327:in `retrieve_connection'
+activerecord (6.1.7.6) lib/active_record/connection_handling.rb:283:in `connection'
+activerecord (6.1.7.6) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.7.6) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.7.6) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.7.6) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.7.6) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (335.0ms)[0m  [1m[35mCREATE DATABASE "video_streaming_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "db/test"."sqlite3" ENCODING = 'unicode'[0m
+  [1m[35m (38.1ms)[0m  [1m[35mCREATE DATABASE "video_streaming_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "video_streaming_test" ENCODING = 'unicode'[0m
+Started GET "/" for ::1 at 2024-02-20 04:23:11 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/sagar/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/sagar/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.4ms | Allocations: 340)
+Completed 200 OK in 15ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 2894)
+
+
+Started GET "/" for ::1 at 2024-02-20 04:50:44 -0500
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20240220092854_create_videos.rb
+
+
+):
+  
+activerecord (6.1.7.6) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.7.6) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.7.6) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.7.6) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.7.6) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.7.6) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8180967891322131780)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateVideos (20240220092854)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "videos" ("id" bigserial primary key, "name" character varying, "video" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240220092854"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2024-02-20 09:51:31.687488"], ["updated_at", "2024-02-20 09:51:31.687488"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8180967891322131780)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2024-02-20 04:51:47 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant VideosController
+Did you mean?  VideoController):
+  
+Started GET "/" for ::1 at 2024-02-20 04:51:50 -0500
+  
+ActionController::RoutingError (uninitialized constant VideosController
+Did you mean?  VideoController):
+  
+Started GET "/videos" for ::1 at 2024-02-20 04:52:05 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/videos"):
+  
+Started GET "/videos/new" for ::1 at 2024-02-20 04:52:11 -0500
+  
+ActionController::RoutingError (uninitialized constant VideosController
+Did you mean?  VideoController):
+  
+Started GET "/videos/new" for ::1 at 2024-02-20 04:52:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/videos/new"):
+  
+Started GET "/video" for ::1 at 2024-02-20 04:52:34 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/video"):
+  
+Started GET "/video/new" for ::1 at 2024-02-20 04:52:40 -0500
+  
+Zeitwerk::NameError (expected file /home/sagar/Documents/test/video_stream/app/controllers/video_controller.rb to define constant VideoController, but didn't):
+  
+zeitwerk (2.6.13) lib/zeitwerk/loader/callbacks.rb:33:in `on_file_autoloaded'
+zeitwerk (2.6.13) lib/zeitwerk/kernel.rb:27:in `require'
+activesupport (6.1.7.6) lib/active_support/inflector/methods.rb:273:in `const_get'
+activesupport (6.1.7.6) lib/active_support/inflector/methods.rb:273:in `constantize'
+activesupport (6.1.7.6) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.1.7.6) lib/action_dispatch/http/request.rb:93:in `controller_class_for'
+actionpack (6.1.7.6) lib/action_dispatch/request/utils.rb:95:in `action_encoding_template'
+actionpack (6.1.7.6) lib/action_dispatch/request/utils.rb:83:in `encode'
+actionpack (6.1.7.6) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (6.1.7.6) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (6.1.7.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/video/new" for ::1 at 2024-02-20 04:57:36 -0500
+Processing by VideoController#new as HTML
+Completed 406 Not Acceptable in 11ms (ActiveRecord: 3.7ms | Allocations: 6487)
+
+
+  
+ActionController::MissingExactTemplate (VideoController#new is missing a template for request formats: text/html):
+  
+actionpack (6.1.7.6) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.1.7.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.1.7.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.1.7.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.1.7.6) lib/abstract_controller/base.rb:228:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+actiontext (6.1.7.6) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.7.6) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.7.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.7.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.7.6) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.7.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (6.1.7.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/video/new" for ::1 at 2024-02-20 04:57:56 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 4287)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 4351)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 5448)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `videos_path' for #<ActionView::Base:0x0000000000bef0>
+Did you mean?  video_path):
+    1: <%= form_with(model: @video, url: videos_path, method: :post, html: { multipart: true }) do |form| %>
+    2:   <%= form.label :name %>
+    3:   <%= form.text_field :name %>
+    4: 
+  
+app/views/video/new.html.erb:1
+Started GET "/video/new" for ::1 at 2024-02-20 04:58:12 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1347)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1411)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2461)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"video"}, missing required keys: [:id]
+Did you mean?  video_url
+               video_index_url
+               video_index_path
+               new_video_url):
+    1: <%= form_with(model: @video, url: video_path, method: :post, html: { multipart: true }) do |form| %>
+    2:   <%= form.label :name %>
+    3:   <%= form.text_field :name %>
+    4: 
+  
+app/views/video/new.html.erb:1
+Started GET "/video/new" for ::1 at 2024-02-20 04:59:38 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 11.7ms | Allocations: 7198)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+/home/sagar/.rbenv/versions/2.7.5/bin/ruby: No such file or directory -- ./bin/webpack (LoadError)
+
+  Rendered layout layouts/application.html.erb (Duration: 60.4ms | Allocations: 21366)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.0ms | Allocations: 22411)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/sagar/Documents/test/video_stream/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/video/new" for ::1 at 2024-02-20 05:05:46 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2907)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 25f5dcf71fa434f7c841
+Version: webpack 4.47.0
+Time: 272ms
+Built at: 02/20/2024 5:05:47 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-6374e56db8fd6b47a381.js   9.22 KiB  application  [emitted] [immutable]  application
+js/application-6374e56db8fd6b47a381.js.map   3.53 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-6374e56db8fd6b47a381.js js/application-6374e56db8fd6b47a381.js.map
+[./app/javascript/packs/application.js] 5.32 KiB {application} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Cannot find package '@babel/plugin-proposal-private-methods' imported from /home/sagar/Documents/test/video_stream/babel-virtual-resolve-base.js
+    at __node_internal_ (/home/sagar/Documents/test/video_stream/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:224:9)
+    at new NodeError (/home/sagar/Documents/test/video_stream/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:194:5)
+    at packageResolve (/home/sagar/Documents/test/video_stream/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:908:9)
+    at moduleResolve (/home/sagar/Documents/test/video_stream/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:937:20)
+    at defaultResolve (/home/sagar/Documents/test/video_stream/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:1007:15)
+    at resolve (/home/sagar/Documents/test/video_stream/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:1020:12)
+    at tryImportMetaResolve (/home/sagar/Documents/test/video_stream/node_modules/@babel/core/lib/config/files/plugins.js:142:45)
+    at resolveStandardizedNameForImport (/home/sagar/Documents/test/video_stream/node_modules/@babel/core/lib/config/files/plugins.js:164:19)
+    at resolveStandardizedName (/home/sagar/Documents/test/video_stream/node_modules/@babel/core/lib/config/files/plugins.js:173:22)
+    at loadPlugin (/home/sagar/Documents/test/video_stream/node_modules/@babel/core/lib/config/files/plugins.js:52:20)
+    at loadPlugin.next (<anonymous>)
+    at createDescriptor (/home/sagar/Documents/test/video_stream/node_modules/@babel/core/lib/config/config-descriptors.js:140:16)
+    at createDescriptor.next (<anonymous>)
+    at step (/home/sagar/Documents/test/video_stream/node_modules/gensync/index.js:261:32)
+    at evaluateAsync (/home/sagar/Documents/test/video_stream/node_modules/gensync/index.js:291:5)
+    at /home/sagar/Documents/test/video_stream/node_modules/gensync/index.js:44:11
+    at Array.forEach (<anonymous>)
+    at Function.async (/home/sagar/Documents/test/video_stream/node_modules/gensync/index.js:43:15)
+    at Function.all (/home/sagar/Documents/test/video_stream/node_modules/gensync/index.js:216:13)
+    at Generator.next (<anonymous>)
+    at createDescriptors (/home/sagar/Documents/test/video_stream/node_modules/@babel/core/lib/config/config-descriptors.js:102:41)
+    at createDescriptors.next (<anonymous>)
+    at createPluginDescriptors (/home/sagar/Documents/test/video_stream/node_modules/@babel/core/lib/config/config-descriptors.js:99:17)
+    at createPluginDescriptors.next (<anonymous>)
+    at /home/sagar/Documents/test/video_stream/node_modules/@babel/core/lib/gensync-utils/functional.js:39:27
+    at Generator.next (<anonymous>)
+    at mergeChainOpts (/home/sagar/Documents/test/video_stream/node_modules/@babel/core/lib/config/config-chain.js:349:34)
+    at mergeChainOpts.next (<anonymous>)
+    at chainWalker (/home/sagar/Documents/test/video_stream/node_modules/@babel/core/lib/config/config-chain.js:316:14)
+    at chainWalker.next (<anonymous>)
+    at loadFileChain (/home/sagar/Documents/test/video_stream/node_modules/@babel/core/lib/config/config-chain.js:191:24)
+    at loadFileChain.next (<anonymous>)
+    at buildRootChain (/home/sagar/Documents/test/video_stream/node_modules/@babel/core/lib/config/config-chain.js:77:27)
+    at buildRootChain.next (<anonymous>)
+    at loadPrivatePartialConfig (/home/sagar/Documents/test/video_stream/node_modules/@babel/core/lib/config/partial.js:72:62)
+    at loadPrivatePartialConfig.next (<anonymous>)
+    at loadPartialConfig (/home/sagar/Documents/test/video_stream/node_modules/@babel/core/lib/config/partial.js:115:25)
+    at loadPartialConfig.next (<anonymous>)
+    at step (/home/sagar/Documents/test/video_stream/node_modules/gensync/index.js:269:25)
+    at evaluateAsync (/home/sagar/Documents/test/video_stream/node_modules/gensync/index.js:291:5)
+    at /home/sagar/Documents/test/video_stream/node_modules/gensync/index.js:93:9
+    at new Promise (<anonymous>)
+    at async (/home/sagar/Documents/test/video_stream/node_modules/gensync/index.js:92:14)
+    at stopHiding - secret - don't use this - v1 (/home/sagar/Documents/test/video_stream/node_modules/@babel/core/lib/errors/rewrite-stack-trace.js:47:12)
+    at loadPartialConfigAsync (/home/sagar/Documents/test/video_stream/node_modules/@babel/core/lib/config/index.js:34:85)
+    at Object.<anonymous> (/home/sagar/Documents/test/video_stream/node_modules/babel-loader/lib/index.js:126:26)
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (/home/sagar/Documents/test/video_stream/node_modules/babel-loader/lib/index.js:3:103)
+    at _next (/home/sagar/Documents/test/video_stream/node_modules/babel-loader/lib/index.js:4:194)
+    at /home/sagar/Documents/test/video_stream/node_modules/babel-loader/lib/index.js:4:364
+    at new Promise (<anonymous>)
+    at Object.<anonymous> (/home/sagar/Documents/test/video_stream/node_modules/babel-loader/lib/index.js:4:97)
+    at Object._loader (/home/sagar/Documents/test/video_stream/node_modules/babel-loader/lib/index.js:210:18)
+    at Object.loader (/home/sagar/Documents/test/video_stream/node_modules/babel-loader/lib/index.js:48:18)
+    at Object.<anonymous> (/home/sagar/Documents/test/video_stream/node_modules/babel-loader/lib/index.js:44:12)
+
+  Rendered layout layouts/application.html.erb (Duration: 1358.3ms | Allocations: 8594)
+Completed 200 OK in 1370ms (Views: 1359.8ms | ActiveRecord: 2.9ms | Allocations: 14611)
+
+
+Started POST "/video/new" for ::1 at 2024-02-20 05:06:50 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/video/new"):
+  
+Started POST "/video/new" for ::1 at 2024-02-20 05:07:28 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/video/new"):
+  
+Started GET "/video/new" for ::1 at 2024-02-20 05:07:29 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 990)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 4239)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 5487)
+
+
+Started GET "/video/new" for ::1 at 2024-02-20 05:07:31 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 717)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 3666)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 4055)
+
+
+Started POST "/video" for ::1 at 2024-02-20 05:07:32 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>""}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:8:in `create'
+  [1m[36mVideo Create (0.9ms)[0m  [1m[32mINSERT INTO "videos" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", ""], ["created_at", "2024-02-20 10:07:32.891163"], ["updated_at", "2024-02-20 10:07:32.891163"]]
+  ↳ app/controllers/video_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 2.2ms | Allocations: 3620)
+
+
+  
+NoMethodError (undefined method `path' for nil:NilClass):
+  
+app/controllers/video_controller.rb:23:in `transcode_and_upload_video'
+app/controllers/video_controller.rb:9:in `create'
+Started GET "/video/new" for ::1 at 2024-02-20 05:07:37 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 713)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3672)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 4070)
+
+
+Started POST "/video" for ::1 at 2024-02-20 05:12:37 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample", "video"=>#<ActionDispatch::Http::UploadedFile:0x00007fbb7419d1d8 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-15842-5spr14.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:8:in `create'
+  [1m[36mVideo Create (0.6ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample"], ["video", "#<ActionDispatch::Http::UploadedFile:0x00007fbb7419d1d8>"], ["created_at", "2024-02-20 10:12:37.756467"], ["updated_at", "2024-02-20 10:12:37.756467"]]
+  ↳ app/controllers/video_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.9ms | Allocations: 4175)
+
+
+  
+NoMethodError (undefined method `path' for "#<ActionDispatch::Http::UploadedFile:0x00007fbb7419d1d8>":String
+Did you mean?  pathmap):
+  
+app/controllers/video_controller.rb:23:in `transcode_and_upload_video'
+app/controllers/video_controller.rb:9:in `create'
+Started GET "/video/new" for ::1 at 2024-02-20 05:15:54 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 774)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 3694)
+Completed 200 OK in 11ms (Views: 4.3ms | ActiveRecord: 2.9ms | Allocations: 7143)
+
+
+Started GET "/video/new" for ::1 at 2024-02-20 05:15:56 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 712)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3661)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 4048)
+
+
+Started POST "/video" for ::1 at 2024-02-20 05:16:03 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample", "video"=>#<ActionDispatch::Http::UploadedFile:0x000056327f682fb0 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-15842-cimve.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:8:in `create'
+  [1m[36mVideo Create (0.6ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample"], ["video", "#<ActionDispatch::Http::UploadedFile:0x000056327f682fb0>"], ["created_at", "2024-02-20 10:16:03.236028"], ["updated_at", "2024-02-20 10:16:03.236028"]]
+  ↳ app/controllers/video_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:8:in `create'
+Redirected to http://localhost:3000/video/3
+Completed 302 Found in 6ms (ActiveRecord: 2.2ms | Allocations: 2650)
+
+
+Started GET "/video/3" for ::1 at 2024-02-20 05:16:03 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1557)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1621)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 2081)
+
+
+  
+ActionView::Template::Error (undefined method `video' for nil:NilClass):
+    1: <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
+    2:   poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+    3:   <source src="<%= @video.video %>" type='video/mp4'>
+    4:   <p class="vjs-no-js">
+    5:     To view this video please enable JavaScript, and consider upgrading to a web browser that
+    6:     <a href="https://videojs.com/html5-video-support/" target="_blank" rel="noopener">supports HTML5 video</a>
+  
+app/views/video/show.html.erb:3
+Started GET "/video/new" for ::1 at 2024-02-20 05:17:16 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 773)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3694)
+Completed 200 OK in 17ms (Views: 6.6ms | ActiveRecord: 3.7ms | Allocations: 7878)
+
+
+Started GET "/video/new" for ::1 at 2024-02-20 05:17:17 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 712)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3661)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 4057)
+
+
+Started POST "/video" for ::1 at 2024-02-20 05:17:22 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"dddd", "video"=>#<ActionDispatch::Http::UploadedFile:0x000056327eff20b0 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-15842-1g1t3pr.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:8:in `create'
+  [1m[36mVideo Create (0.7ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "dddd"], ["video", "sample.mp4"], ["created_at", "2024-02-20 10:17:22.556642"], ["updated_at", "2024-02-20 10:17:22.556642"]]
+  ↳ app/controllers/video_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:8:in `create'
+Redirected to http://localhost:3000/video/4
+Completed 302 Found in 17ms (ActiveRecord: 2.4ms | Allocations: 8818)
+
+
+Started GET "/video/4" for ::1 at 2024-02-20 05:17:22 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1450)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1514)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1869)
+
+
+  
+ActionView::Template::Error (undefined method `video' for nil:NilClass):
+    1: <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
+    2:   poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+    3:   <source src="<%= @video.video %>" type='video/mp4'>
+    4:   <p class="vjs-no-js">
+    5:     To view this video please enable JavaScript, and consider upgrading to a web browser that
+    6:     <a href="https://videojs.com/html5-video-support/" target="_blank" rel="noopener">supports HTML5 video</a>
+  
+app/views/video/show.html.erb:3
+Started GET "/video/new" for ::1 at 2024-02-20 05:19:18 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 894)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 4024)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 5156)
+
+
+Started POST "/video" for ::1 at 2024-02-20 05:19:27 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample", "video"=>#<ActionDispatch::Http::UploadedFile:0x000056327f6f3df0 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-15842-w3ngd3.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:8:in `create'
+  [1m[36mVideo Create (0.6ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample"], ["video", "sample.mp4"], ["created_at", "2024-02-20 10:19:27.714361"], ["updated_at", "2024-02-20 10:19:27.714361"]]
+  ↳ app/controllers/video_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:8:in `create'
+Redirected to http://localhost:3000/video/5
+Completed 302 Found in 10ms (ActiveRecord: 1.9ms | Allocations: 8558)
+
+
+Started GET "/video/5" for ::1 at 2024-02-20 05:19:27 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1548)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1612)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 2072)
+
+
+  
+ActionView::Template::Error (undefined method `video' for nil:NilClass):
+    1: <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
+    2:   poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+    3:   <source src="<%= @video.video %>" type='video/mp4'>
+    4:   <p class="vjs-no-js">
+    5:     To view this video please enable JavaScript, and consider upgrading to a web browser that
+    6:     <a href="https://videojs.com/html5-video-support/" target="_blank" rel="noopener">supports HTML5 video</a>
+  
+app/views/video/show.html.erb:3
+Started GET "/video/new" for ::1 at 2024-02-20 05:23:13 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 772)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3692)
+Completed 200 OK in 14ms (Views: 4.6ms | ActiveRecord: 2.5ms | Allocations: 7742)
+
+
+Started POST "/video" for ::1 at 2024-02-20 05:23:15 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample", "video"=>#<ActionDispatch::Http::UploadedFile:0x000056327f7dbf88 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-15842-bd9ppx.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:8:in `create'
+  [1m[36mVideo Create (0.6ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample"], ["video", "sample.mp4"], ["created_at", "2024-02-20 10:23:15.049395"], ["updated_at", "2024-02-20 10:23:15.049395"]]
+  ↳ app/controllers/video_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:8:in `create'
+Redirected to http://localhost:3000/video/6
+Completed 302 Found in 10ms (ActiveRecord: 2.2ms | Allocations: 3584)
+
+
+Started GET "/video/6" for ::1 at 2024-02-20 05:23:15 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"6"}
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1451)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 1515)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1870)
+
+
+  
+ActionView::Template::Error (undefined method `video' for nil:NilClass):
+    1: <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
+    2:   poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+    3:   <source src="<%= @video.video %>" type='video/mp4'>
+    4:   <p class="vjs-no-js">
+    5:     To view this video please enable JavaScript, and consider upgrading to a web browser that
+    6:     <a href="https://videojs.com/html5-video-support/" target="_blank" rel="noopener">supports HTML5 video</a>
+  
+app/views/video/show.html.erb:3
+Started GET "/video/6" for ::1 at 2024-02-20 05:24:52 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"6"}
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 134)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3220)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 4260)
+
+
+Started GET "/video/MY_VIDEO_POSTER.jpg" for ::1 at 2024-02-20 05:24:52 -0500
+Processing by VideoController#show as JPEG
+  Parameters: {"id"=>"MY_VIDEO_POSTER"}
+Completed 406 Not Acceptable in 2ms (ActiveRecord: 0.0ms | Allocations: 1303)
+
+
+  
+ActionController::UnknownFormat (VideoController#show is missing a template for this request format and variant.
+
+request.formats: ["image/jpeg"]
+request.variant: []):
+  
+actionpack (6.1.7.6) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (6.1.7.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.1.7.6) lib/abstract_controller/base.rb:228:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+actiontext (6.1.7.6) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.7.6) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.7.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.7.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.7.6) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.7.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (6.1.7.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/video/MY_VIDEO_POSTER.jpg" for ::1 at 2024-02-20 05:24:56 -0500
+Processing by VideoController#show as JPEG
+  Parameters: {"id"=>"MY_VIDEO_POSTER"}
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 614)
+
+
+  
+ActionController::UnknownFormat (VideoController#show is missing a template for this request format and variant.
+
+request.formats: ["image/jpeg"]
+request.variant: []):
+  
+actionpack (6.1.7.6) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (6.1.7.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.1.7.6) lib/abstract_controller/base.rb:228:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+actiontext (6.1.7.6) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.7.6) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.7.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.7.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.7.6) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.7.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (6.1.7.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/video/6" for ::1 at 2024-02-20 05:27:09 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"6"}
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1548)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1612)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2619)
+
+
+  
+ActionView::Template::Error (undefined method `video' for nil:NilClass):
+    1: <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
+    2:   poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+    3:   <source src="<%= @video.video.url %>" type='video/mp4'>
+    4:   <p class="vjs-no-js">
+    5:     To view this video please enable JavaScript, and consider upgrading to a web browser that
+    6:     <a href="https://videojs.com/html5-video-support/" target="_blank" rel="noopener">supports HTML5 video</a>
+  
+app/views/video/show.html.erb:3
+Started GET "/video/new" for ::1 at 2024-02-20 05:28:21 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 949)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 4041)
+Completed 200 OK in 13ms (Views: 4.9ms | ActiveRecord: 2.9ms | Allocations: 8215)
+
+
+Started POST "/video" for ::1 at 2024-02-20 05:28:25 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample", "video"=>#<ActionDispatch::Http::UploadedFile:0x00007fbb787bcce0 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-15842-1bd431t.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:8:in `create'
+  [1m[36mVideo Create (0.6ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample"], ["video", "sample.mp4"], ["created_at", "2024-02-20 10:28:25.453095"], ["updated_at", "2024-02-20 10:28:25.453095"]]
+  ↳ app/controllers/video_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:8:in `create'
+Redirected to http://localhost:3000/video/7
+Completed 302 Found in 9ms (ActiveRecord: 2.1ms | Allocations: 3591)
+
+
+Started GET "/video/7" for ::1 at 2024-02-20 05:28:25 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"7"}
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1450)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 1514)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1870)
+
+
+  
+ActionView::Template::Error (undefined method `video' for nil:NilClass):
+    1: <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
+    2:   poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+    3:   <source src="<%= @video.video.url %>" type='video/mp4'>
+    4:   <p class="vjs-no-js">
+    5:     To view this video please enable JavaScript, and consider upgrading to a web browser that
+    6:     <a href="https://videojs.com/html5-video-support/" target="_blank" rel="noopener">supports HTML5 video</a>
+  
+app/views/video/show.html.erb:3
+Started GET "/video/new" for ::1 at 2024-02-20 05:28:58 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 772)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3692)
+Completed 200 OK in 12ms (Views: 4.5ms | ActiveRecord: 2.7ms | Allocations: 7715)
+
+
+Started POST "/video" for ::1 at 2024-02-20 05:28:59 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample", "video"=>#<ActionDispatch::Http::UploadedFile:0x00007fbb74764418 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-15842-1xbtnus.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:8:in `create'
+  [1m[36mVideo Create (0.6ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample"], ["video", "sample.mp4"], ["created_at", "2024-02-20 10:28:59.948115"], ["updated_at", "2024-02-20 10:28:59.948115"]]
+  ↳ app/controllers/video_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:8:in `create'
+Redirected to http://localhost:3000/video/8
+Completed 302 Found in 9ms (ActiveRecord: 1.8ms | Allocations: 3585)
+
+
+Started GET "/video/8" for ::1 at 2024-02-20 05:28:59 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"8"}
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1450)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 1514)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1869)
+
+
+  
+ActionView::Template::Error (undefined method `video' for nil:NilClass):
+    1: <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
+    2:   poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+    3:   <source src="<%= @video.video.url %>" type='video/mp4'>
+    4:   <p class="vjs-no-js">
+    5:     To view this video please enable JavaScript, and consider upgrading to a web browser that
+    6:     <a href="https://videojs.com/html5-video-support/" target="_blank" rel="noopener">supports HTML5 video</a>
+  
+app/views/video/show.html.erb:3
+Started GET "/video/8" for ::1 at 2024-02-20 05:29:46 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 3027)
+Completed 200 OK in 13ms (Views: 3.8ms | ActiveRecord: 3.8ms | Allocations: 8263)
+
+
+Started GET "/video/MY_VIDEO_POSTER.jpg" for ::1 at 2024-02-20 05:29:46 -0500
+Processing by VideoController#show as JPEG
+  Parameters: {"id"=>"MY_VIDEO_POSTER"}
+  [1m[36mVideo Load (0.7ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:19:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.7ms | Allocations: 1225)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Video with 'id'=MY_VIDEO_POSTER):
+  
+app/controllers/video_controller.rb:19:in `show'
+Started GET "/video/8" for ::1 at 2024-02-20 05:31:26 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 237)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3327)
+Completed 200 OK in 17ms (Views: 7.7ms | ActiveRecord: 3.3ms | Allocations: 8621)
+
+
+Started GET "/video/MY_VIDEO_POSTER.jpg" for ::1 at 2024-02-20 05:31:26 -0500
+Processing by VideoController#show as JPEG
+  Parameters: {"id"=>"MY_VIDEO_POSTER"}
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:17:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms | Allocations: 1224)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Video with 'id'=MY_VIDEO_POSTER):
+  
+app/controllers/video_controller.rb:17:in `show'
+Started GET "/video/MY_VIDEO_POSTER.jpg" for ::1 at 2024-02-20 05:32:36 -0500
+Processing by VideoController#show as JPEG
+  Parameters: {"id"=>"MY_VIDEO_POSTER"}
+  [1m[36mVideo Load (0.7ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:17:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.7ms | Allocations: 1223)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Video with 'id'=MY_VIDEO_POSTER):
+  
+app/controllers/video_controller.rb:17:in `show'
+Started GET "/video/8" for ::1 at 2024-02-20 05:36:29 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mVideo Load (0.7ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 230)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3362)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.7ms | Allocations: 5161)
+
+
+Started GET "/video/new" for ::1 at 2024-02-20 06:44:09 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 947)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3861)
+Completed 200 OK in 33ms (Views: 9.1ms | ActiveRecord: 5.5ms | Allocations: 11539)
+
+
+Started GET "/video/new" for ::1 at 2024-02-20 06:44:10 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 712)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 3661)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 4057)
+
+
+Started POST "/video" for ::1 at 2024-02-20 06:44:22 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample", "video"=>#<ActionDispatch::Http::UploadedFile:0x00007fbb788e7840 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-15842-1jrv6t5.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:8:in `create'
+  [1m[36mVideo Create (0.9ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample"], ["video", "sample.mp4"], ["created_at", "2024-02-20 11:44:22.863531"], ["updated_at", "2024-02-20 11:44:22.863531"]]
+  ↳ app/controllers/video_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.1ms | Allocations: 3911)
+
+
+  
+Errno::ENOENT (No such file or directory - the ffmpeg binary could not be found in /home/sagar/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/bin:/home/sagar/.rbenv/versions/2.7.5/bin:/home/sagar/.rbenv/libexec:/home/sagar/.rbenv/plugins/ruby-build/bin:/home/sagar/.nvm/versions/node/v21.6.1/bin:/home/sagar/.rbenv/shims:/home/sagar/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin):
+  
+app/controllers/video_controller.rb:31:in `new'
+app/controllers/video_controller.rb:31:in `transcode_and_upload_video'
+app/controllers/video_controller.rb:9:in `create'
+Started GET "/video/new" for ::1 at 2024-02-20 06:48:37 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 712)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3663)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 4059)
+
+
+Started POST "/video" for ::1 at 2024-02-20 06:48:39 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample", "video"=>#<ActionDispatch::Http::UploadedFile:0x00007fbb78adbde0 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-15842-ylllqx.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:8:in `create'
+  [1m[36mVideo Create (0.6ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample"], ["video", "sample.mp4"], ["created_at", "2024-02-20 11:48:39.949333"], ["updated_at", "2024-02-20 11:48:39.949333"]]
+  ↳ app/controllers/video_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.9ms | Allocations: 4202)
+
+
+  
+NoMethodError (undefined method `transcode' for #<FFMPEG::Transcoder:0x00007fbb789d24f8>):
+  
+app/controllers/video_controller.rb:32:in `transcode_and_upload_video'
+app/controllers/video_controller.rb:9:in `create'
+Started GET "/video/new" for ::1 at 2024-02-20 06:53:38 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 772)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3692)
+Completed 200 OK in 16ms (Views: 4.3ms | ActiveRecord: 4.1ms | Allocations: 7887)
+
+
+Started GET "/video/new" for ::1 at 2024-02-20 06:53:39 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 712)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3661)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 4056)
+
+
+Started POST "/video" for ::1 at 2024-02-20 06:53:44 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample", "video"=>#<ActionDispatch::Http::UploadedFile:0x00007fbb7889e6e0 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-15842-1n8p2e0.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:8:in `create'
+  [1m[36mVideo Create (0.8ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample"], ["video", "sample.mp4"], ["created_at", "2024-02-20 11:53:44.882401"], ["updated_at", "2024-02-20 11:53:44.882401"]]
+  ↳ app/controllers/video_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:8:in `create'
+Redirected to http://localhost:3000/video/11
+Completed 302 Found in 989ms (ActiveRecord: 2.1ms | Allocations: 5266)
+
+
+Started GET "/video/11" for ::1 at 2024-02-20 06:53:45 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 129)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 3080)
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 1.1ms | Allocations: 4461)
+
+
+Started GET "/video/new" for ::1 at 2024-02-20 06:55:32 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 949)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 4033)
+Completed 200 OK in 13ms (Views: 5.2ms | ActiveRecord: 2.7ms | Allocations: 8643)
+
+
+Started GET "/video/new" for ::1 at 2024-02-20 06:55:33 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 717)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3666)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 4062)
+
+
+Started POST "/video" for ::1 at 2024-02-20 06:55:38 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample", "video"=>#<ActionDispatch::Http::UploadedFile:0x00007fbb74ace3d8 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-15842-1xfv5i3.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:8:in `create'
+  [1m[36mVideo Create (0.6ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample"], ["video", "sample.mp4"], ["created_at", "2024-02-20 11:55:38.995412"], ["updated_at", "2024-02-20 11:55:38.995412"]]
+  ↳ app/controllers/video_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 709ms (ActiveRecord: 1.9ms | Allocations: 6582)
+
+
+  
+NameError (uninitialized constant VideoController::Aws):
+  
+app/controllers/video_controller.rb:37:in `transcode_and_upload_video'
+app/controllers/video_controller.rb:9:in `create'
+Started GET "/video/new" for ::1 at 2024-02-20 07:03:16 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 772)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3692)
+Completed 200 OK in 42ms (Views: 10.1ms | ActiveRecord: 7.5ms | Allocations: 11201)
+
+
+Started GET "/video/new" for ::1 at 2024-02-20 07:03:18 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 712)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3661)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 4056)
+
+
+Started POST "/video" for ::1 at 2024-02-20 07:03:28 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample", "video"=>#<ActionDispatch::Http::UploadedFile:0x00007fbb78bd16f0 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-15842-4us8d5.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mVideo Create (0.8ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample"], ["video", "sample.mp4"], ["created_at", "2024-02-20 12:03:28.246550"], ["updated_at", "2024-02-20 12:03:28.246550"]]
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 1692ms (ActiveRecord: 2.1ms | Allocations: 7867)
+
+
+  
+Aws::Errors::MissingRegionError (No region was provided. Configure the `:region` option or export the region name to ENV['AWS_REGION']):
+  
+app/controllers/video_controller.rb:39:in `new'
+app/controllers/video_controller.rb:39:in `transcode_and_upload_video'
+app/controllers/video_controller.rb:11:in `create'
+Started GET "/video/new" for ::1 at 2024-02-20 07:10:29 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2888)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 7498)
+Completed 200 OK in 19ms (Views: 8.8ms | ActiveRecord: 3.0ms | Allocations: 14308)
+
+
+Started POST "/video" for ::1 at 2024-02-20 07:10:35 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample", "video"=>#<ActionDispatch::Http::UploadedFile:0x00007f6314555860 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-20819-1bed9re.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mVideo Create (0.7ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample"], ["video", "sample.mp4"], ["created_at", "2024-02-20 12:10:35.592207"], ["updated_at", "2024-02-20 12:10:35.592207"]]
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 701ms (ActiveRecord: 1.9ms | Allocations: 52593)
+
+
+  
+NameError (undefined local variable or method `transcoded_video_path' for #<VideoController:0x0000000000a230>
+Did you mean?  transcoded_video
+               transcoded_video_dir):
+  
+app/controllers/video_controller.rb:44:in `transcode_and_upload_video'
+app/controllers/video_controller.rb:11:in `create'
+Started GET "/video/new" for ::1 at 2024-02-20 07:11:42 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 879)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3915)
+Completed 200 OK in 12ms (Views: 4.1ms | ActiveRecord: 2.8ms | Allocations: 8159)
+
+
+Started POST "/video" for ::1 at 2024-02-20 07:11:44 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample", "video"=>#<ActionDispatch::Http::UploadedFile:0x00007f63155e83f8 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-20819-us8adt.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mVideo Create (0.6ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample"], ["video", "sample.mp4"], ["created_at", "2024-02-20 12:11:44.038930"], ["updated_at", "2024-02-20 12:11:44.038930"]]
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:48:in `transcode_and_upload_video'
+  [1m[36mVideo Update (0.8ms)[0m  [1m[33mUPDATE "videos" SET "video" = $1, "updated_at" = $2 WHERE "videos"."id" = $3[0m  [["video", nil], ["updated_at", "2024-02-20 12:11:46.474302"], ["id", 15]]
+  ↳ app/controllers/video_controller.rb:48:in `transcode_and_upload_video'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:48:in `transcode_and_upload_video'
+Redirected to http://localhost:3000/video/15
+Completed 302 Found in 2444ms (ActiveRecord: 4.3ms | Allocations: 151176)
+
+
+Started GET "/video/15" for ::1 at 2024-02-20 07:11:46 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 163)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 3125)
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 1.0ms | Allocations: 4685)
+
+
+Started GET "/video/new" for ::1 at 2024-02-20 07:15:36 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 773)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 3686)
+Completed 200 OK in 12ms (Views: 4.5ms | ActiveRecord: 3.0ms | Allocations: 7723)
+
+
+Started POST "/video" for ::1 at 2024-02-20 07:15:38 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample", "video"=>#<ActionDispatch::Http::UploadedFile:0x00007f63155eb3a0 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-20819-lnvlsa.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mVideo Create (0.6ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample"], ["video", "sample.mp4"], ["created_at", "2024-02-20 12:15:38.010564"], ["updated_at", "2024-02-20 12:15:38.010564"]]
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:48:in `transcode_and_upload_video'
+  [1m[36mVideo Update (0.9ms)[0m  [1m[33mUPDATE "videos" SET "video" = $1, "updated_at" = $2 WHERE "videos"."id" = $3[0m  [["video", nil], ["updated_at", "2024-02-20 12:15:40.396642"], ["id", 16]]
+  ↳ app/controllers/video_controller.rb:48:in `transcode_and_upload_video'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:48:in `transcode_and_upload_video'
+Redirected to http://localhost:3000/video/16
+Completed 302 Found in 2394ms (ActiveRecord: 4.4ms | Allocations: 11047)
+
+
+Started GET "/video/16" for ::1 at 2024-02-20 07:15:40 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 60)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 3019)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.5ms | Allocations: 4192)
+
+
+Started GET "/video/new" for ::1 at 2024-02-20 07:16:07 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 773)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3686)
+Completed 200 OK in 13ms (Views: 4.7ms | ActiveRecord: 2.7ms | Allocations: 7704)
+
+
+Started POST "/video" for ::1 at 2024-02-20 07:16:09 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample", "video"=>#<ActionDispatch::Http::UploadedFile:0x00007f6314c05d90 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-20819-1yal3i9.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mVideo Create (1.4ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample"], ["video", "sample.mp4"], ["created_at", "2024-02-20 12:16:09.573317"], ["updated_at", "2024-02-20 12:16:09.573317"]]
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:48:in `transcode_and_upload_video'
+  [1m[36mVideo Update (0.7ms)[0m  [1m[33mUPDATE "videos" SET "video" = $1, "updated_at" = $2 WHERE "videos"."id" = $3[0m  [["video", nil], ["updated_at", "2024-02-20 12:16:12.011906"], ["id", 17]]
+  ↳ app/controllers/video_controller.rb:48:in `transcode_and_upload_video'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:48:in `transcode_and_upload_video'
+Redirected to http://localhost:3000/video/17
+Completed 302 Found in 2450ms (ActiveRecord: 6.1ms | Allocations: 11065)
+
+
+Started GET "/video/17" for ::1 at 2024-02-20 07:16:12 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 60)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 3012)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.5ms | Allocations: 4187)
+
+
+Started GET "/video/new" for ::1 at 2024-02-20 07:17:04 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 773)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 3693)
+Completed 200 OK in 11ms (Views: 4.1ms | ActiveRecord: 2.8ms | Allocations: 7680)
+
+
+Started POST "/video" for ::1 at 2024-02-20 07:17:06 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample", "video"=>#<ActionDispatch::Http::UploadedFile:0x00007f63158b3470 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-20819-140r0vg.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mVideo Create (0.6ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample"], ["video", "sample.mp4"], ["created_at", "2024-02-20 12:17:06.439786"], ["updated_at", "2024-02-20 12:17:06.439786"]]
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:50:in `transcode_and_upload_video'
+  [1m[36mVideo Update (0.7ms)[0m  [1m[33mUPDATE "videos" SET "video" = $1, "updated_at" = $2 WHERE "videos"."id" = $3[0m  [["video", nil], ["updated_at", "2024-02-20 12:17:08.849173"], ["id", 18]]
+  ↳ app/controllers/video_controller.rb:50:in `transcode_and_upload_video'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:50:in `transcode_and_upload_video'
+Redirected to http://localhost:3000/video/18
+Completed 302 Found in 2418ms (ActiveRecord: 4.3ms | Allocations: 11134)
+
+
+Started GET "/video/18" for ::1 at 2024-02-20 07:17:08 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 60)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 3019)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.5ms | Allocations: 4192)
+
+
+Started GET "/video/new" for ::1 at 2024-02-20 07:20:14 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 772)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3684)
+Completed 200 OK in 12ms (Views: 4.2ms | ActiveRecord: 3.0ms | Allocations: 7707)
+
+
+Started GET "/video/new" for ::1 at 2024-02-20 07:20:16 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 713)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3670)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 4067)
+
+
+Started POST "/video" for ::1 at 2024-02-20 07:20:19 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample", "video"=>#<ActionDispatch::Http::UploadedFile:0x00007f632486d1f0 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-20819-1sv5uhf.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mVideo Create (0.6ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample"], ["video", "sample.mp4"], ["created_at", "2024-02-20 12:20:20.002151"], ["updated_at", "2024-02-20 12:20:20.002151"]]
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:55:in `transcode_and_upload_video'
+  [1m[36mVideo Update (1.1ms)[0m  [1m[33mUPDATE "videos" SET "video" = $1, "updated_at" = $2 WHERE "videos"."id" = $3[0m  [["video", nil], ["updated_at", "2024-02-20 12:20:28.713219"], ["id", 19]]
+  ↳ app/controllers/video_controller.rb:55:in `transcode_and_upload_video'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:55:in `transcode_and_upload_video'
+Redirected to http://localhost:3000/video/19
+Completed 302 Found in 8722ms (ActiveRecord: 4.8ms | Allocations: 11330)
+
+
+Started GET "/video/19" for ::1 at 2024-02-20 07:20:28 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mVideo Load (1.1ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 60)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3011)
+Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 1.1ms | Allocations: 4183)
+
+
+Started GET "/video/19" for ::1 at 2024-02-20 07:21:26 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 60)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 3011)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 4072)
+
+
+Started GET "/video/new" for ::1 at 2024-02-20 07:21:27 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 712)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3661)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 4056)
+
+
+Started GET "/video/new" for ::1 at 2024-02-20 07:22:21 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 772)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3691)
+Completed 200 OK in 12ms (Views: 4.4ms | ActiveRecord: 2.7ms | Allocations: 7696)
+
+
+Started POST "/video" for ::1 at 2024-02-20 07:26:20 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample", "video"=>#<ActionDispatch::Http::UploadedFile:0x00007f63280264c0 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-20819-7950eg.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mVideo Create (0.7ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample"], ["video", "sample.mp4"], ["created_at", "2024-02-20 12:26:20.564083"], ["updated_at", "2024-02-20 12:26:20.564083"]]
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:53:in `transcode_and_upload_video'
+  [1m[36mVideo Update (0.7ms)[0m  [1m[33mUPDATE "videos" SET "video" = $1, "updated_at" = $2 WHERE "videos"."id" = $3[0m  [["video", nil], ["updated_at", "2024-02-20 12:26:30.146854"], ["id", 20]]
+  ↳ app/controllers/video_controller.rb:53:in `transcode_and_upload_video'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:53:in `transcode_and_upload_video'
+Redirected to http://localhost:3000/video/20
+Completed 302 Found in 9591ms (ActiveRecord: 4.1ms | Allocations: 11273)
+
+
+Started GET "/video/20" for ::1 at 2024-02-20 07:26:30 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 60)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 3019)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.5ms | Allocations: 4192)
+
+
+Started GET "/video/20" for ::1 at 2024-02-20 07:26:54 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1121)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 1185)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms | Allocations: 2961)
+
+
+  
+ActionView::Template::Error (no implicit conversion of nil into String):
+    1: <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet" />
+    2: <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" data-setup="{}">
+    3:   <source src="<%= root_url.chomp('/') + @video.video.url %>" type='video/mp4'>
+    4: </video>
+    5: <script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
+  
+app/views/video/show.html.erb:3:in `+'
+app/views/video/show.html.erb:3
+Started GET "/video/20" for ::1 at 2024-02-20 07:27:14 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mVideo Load (0.6ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 153)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 3285)
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 0.6ms | Allocations: 5082)
+
+
+Started GET "/video/20" for ::1 at 2024-02-20 07:27:36 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 154)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3278)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.5ms | Allocations: 5071)
+
+
+Started GET "/video/20" for ::1 at 2024-02-20 07:29:16 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 180)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 3312)
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.5ms | Allocations: 5117)
+
+
+Started GET "/video/20" for ::1 at 2024-02-20 07:29:28 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 177)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3301)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.5ms | Allocations: 5095)
+
+
+Started GET "/video/new" for ::1 at 2024-02-20 07:31:19 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 946)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3858)
+Completed 200 OK in 13ms (Views: 4.8ms | ActiveRecord: 3.0ms | Allocations: 8011)
+
+
+Started POST "/video" for ::1 at 2024-02-20 07:31:21 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample", "video"=>#<ActionDispatch::Http::UploadedFile:0x00007f6314a8c220 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-20819-s8rh8l.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mVideo Create (0.6ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample"], ["video", "sample.mp4"], ["created_at", "2024-02-20 12:31:21.552682"], ["updated_at", "2024-02-20 12:31:21.552682"]]
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:53:in `transcode_and_upload_video'
+  [1m[36mVideo Update (0.7ms)[0m  [1m[33mUPDATE "videos" SET "video" = $1, "updated_at" = $2 WHERE "videos"."id" = $3[0m  [["video", nil], ["updated_at", "2024-02-20 12:31:25.584641"], ["id", 21]]
+  ↳ app/controllers/video_controller.rb:53:in `transcode_and_upload_video'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:53:in `transcode_and_upload_video'
+Redirected to http://localhost:3000/video/21
+Completed 302 Found in 4041ms (ActiveRecord: 4.3ms | Allocations: 11263)
+
+
+Started GET "/video/21" for ::1 at 2024-02-20 07:31:25 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 66)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 3017)
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.5ms | Allocations: 4193)
+
+
+Started GET "/video/new" for ::1 at 2024-02-20 07:32:48 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 772)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3692)
+Completed 200 OK in 12ms (Views: 4.5ms | ActiveRecord: 2.9ms | Allocations: 7675)
+
+
+Started POST "/video" for ::1 at 2024-02-20 07:32:50 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample", "video"=>#<ActionDispatch::Http::UploadedFile:0x00007f63158a5fa0 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-20819-77dt2l.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mVideo Create (0.6ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample"], ["video", "sample.mp4"], ["created_at", "2024-02-20 12:32:50.376767"], ["updated_at", "2024-02-20 12:32:50.376767"]]
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:53:in `transcode_and_upload_video'
+  [1m[36mVideo Update (0.7ms)[0m  [1m[33mUPDATE "videos" SET "video" = $1, "updated_at" = $2 WHERE "videos"."id" = $3[0m  [["video", nil], ["updated_at", "2024-02-20 12:32:54.284291"], ["id", 22]]
+  ↳ app/controllers/video_controller.rb:53:in `transcode_and_upload_video'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:53:in `transcode_and_upload_video'
+Redirected to http://localhost:3000/video/22
+Completed 302 Found in 3916ms (ActiveRecord: 4.4ms | Allocations: 11252)
+
+
+Started GET "/video/22" for ::1 at 2024-02-20 07:32:54 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 66)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 3025)
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 4198)
+
+
+Started GET "/video/new" for ::1 at 2024-02-20 07:33:26 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 772)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3684)
+Completed 200 OK in 12ms (Views: 4.1ms | ActiveRecord: 2.9ms | Allocations: 7688)
+
+
+Started POST "/video" for ::1 at 2024-02-20 07:33:28 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample", "video"=>#<ActionDispatch::Http::UploadedFile:0x00007f6314afa9c8 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-20819-18kf9or.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mVideo Create (0.6ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample"], ["video", "sample.mp4"], ["created_at", "2024-02-20 12:33:28.480409"], ["updated_at", "2024-02-20 12:33:28.480409"]]
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:54:in `transcode_and_upload_video'
+  [1m[36mVideo Update (1.1ms)[0m  [1m[33mUPDATE "videos" SET "video" = $1, "updated_at" = $2 WHERE "videos"."id" = $3[0m  [["video", nil], ["updated_at", "2024-02-20 12:33:36.029279"], ["id", 23]]
+  ↳ app/controllers/video_controller.rb:54:in `transcode_and_upload_video'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:54:in `transcode_and_upload_video'
+Redirected to http://localhost:3000/video/23
+Completed 302 Found in 7558ms (ActiveRecord: 4.6ms | Allocations: 11116)
+
+
+Started GET "/video/23" for ::1 at 2024-02-20 07:33:36 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 66)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 3017)
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 4189)
+
+
+Started GET "/video/new" for ::1 at 2024-02-20 07:34:59 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 712)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3661)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 4056)
+
+
+Started POST "/video" for ::1 at 2024-02-20 07:35:03 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"qqqqqqqqq", "video"=>#<ActionDispatch::Http::UploadedFile:0x00007f6325ed7be8 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-20819-1iuoolg.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mVideo Create (0.6ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "qqqqqqqqq"], ["video", "sample.mp4"], ["created_at", "2024-02-20 12:35:03.070465"], ["updated_at", "2024-02-20 12:35:03.070465"]]
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:54:in `transcode_and_upload_video'
+  [1m[36mVideo Update (0.7ms)[0m  [1m[33mUPDATE "videos" SET "video" = $1, "updated_at" = $2 WHERE "videos"."id" = $3[0m  [["video", nil], ["updated_at", "2024-02-20 12:35:11.910035"], ["id", 24]]
+  ↳ app/controllers/video_controller.rb:54:in `transcode_and_upload_video'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:54:in `transcode_and_upload_video'
+Redirected to http://localhost:3000/video/24
+Completed 302 Found in 8848ms (ActiveRecord: 4.1ms | Allocations: 10938)
+
+
+Started GET "/video/24" for ::1 at 2024-02-20 07:35:11 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mVideo Load (0.6ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 66)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 3017)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.6ms | Allocations: 4078)
+
+
+Started GET "/video/new" for ::1 at 2024-02-20 07:36:13 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 772)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3692)
+Completed 200 OK in 12ms (Views: 4.3ms | ActiveRecord: 3.1ms | Allocations: 7698)
+
+
+Started POST "/video" for ::1 at 2024-02-20 07:36:15 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"qqqqqqqqq", "video"=>#<ActionDispatch::Http::UploadedFile:0x00007f6314d28510 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-20819-159ii0p.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mVideo Create (0.6ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "qqqqqqqqq"], ["video", "sample.mp4"], ["created_at", "2024-02-20 12:36:15.460341"], ["updated_at", "2024-02-20 12:36:15.460341"]]
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:54:in `transcode_and_upload_video'
+  [1m[36mVideo Update (0.7ms)[0m  [1m[33mUPDATE "videos" SET "video" = $1, "updated_at" = $2 WHERE "videos"."id" = $3[0m  [["video", nil], ["updated_at", "2024-02-20 12:36:23.009827"], ["id", 25]]
+  ↳ app/controllers/video_controller.rb:54:in `transcode_and_upload_video'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:54:in `transcode_and_upload_video'
+Redirected to http://localhost:3000/video/25
+Completed 302 Found in 7558ms (ActiveRecord: 4.0ms | Allocations: 11203)
+
+
+Started GET "/video/25" for ::1 at 2024-02-20 07:36:23 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 66)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 3017)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 4189)
+
+
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos" ORDER BY "videos"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8180967891322131780)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddS3UrlToVideo (20240220124700)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "videos" ADD "s3_url" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240220124700"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8180967891322131780)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/video/new" for ::1 at 2024-02-20 07:48:22 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 951)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 4035)
+Completed 200 OK in 13ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 7948)
+
+
+Started GET "/video/new" for ::1 at 2024-02-20 07:48:23 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 717)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3666)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 4062)
+
+
+Started POST "/video" for ::1 at 2024-02-20 07:48:30 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample123", "video"=>#<ActionDispatch::Http::UploadedFile:0x00007f6315203418 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-20819-hrhdta.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mVideo Create (0.8ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample123"], ["video", "sample.mp4"], ["created_at", "2024-02-20 12:48:30.112460"], ["updated_at", "2024-02-20 12:48:30.112460"]]
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 7762ms (ActiveRecord: 2.2ms | Allocations: 9097)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 's3_url' for Video.):
+  
+app/controllers/video_controller.rb:53:in `transcode_and_upload_video'
+app/controllers/video_controller.rb:11:in `create'
+Started GET "/video/new" for ::1 at 2024-02-20 07:49:28 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2888)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 7498)
+Completed 200 OK in 27ms (Views: 8.8ms | ActiveRecord: 3.2ms | Allocations: 14763)
+
+
+Started POST "/video" for ::1 at 2024-02-20 07:49:31 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample123", "video"=>#<ActionDispatch::Http::UploadedFile:0x00007f86b855f780 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-24710-3lix44.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mVideo Create (0.7ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample123"], ["video", "sample.mp4"], ["created_at", "2024-02-20 12:49:31.118781"], ["updated_at", "2024-02-20 12:49:31.118781"]]
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:53:in `transcode_and_upload_video'
+  [1m[36mVideo Update (0.8ms)[0m  [1m[33mUPDATE "videos" SET "updated_at" = $1, "s3_url" = $2 WHERE "videos"."id" = $3[0m  [["updated_at", "2024-02-20 12:49:38.710760"], ["s3_url", "https://gcc-vault-staging.s3.amazonaws.com/output.mp4"], ["id", 27]]
+  ↳ app/controllers/video_controller.rb:53:in `transcode_and_upload_video'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:53:in `transcode_and_upload_video'
+Redirected to http://localhost:3000/video/27
+Completed 302 Found in 7601ms (ActiveRecord: 4.2ms | Allocations: 194231)
+
+
+Started GET "/video/27" for ::1 at 2024-02-20 07:49:38 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 225)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 3188)
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 1.1ms | Allocations: 4717)
+
+
+Started GET "/video/27" for ::1 at 2024-02-20 07:55:46 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mVideo Load (0.6ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 256)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 4881)
+Completed 200 OK in 23ms (Views: 7.5ms | ActiveRecord: 4.6ms | Allocations: 13469)
+
+
+Started GET "/video/new" for ::1 at 2024-02-20 07:55:53 -0500
+Processing by VideoController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering video/new.html.erb within layouts/application
+  Rendered video/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2790)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 5740)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 6275)
+
+
+Started POST "/video" for ::1 at 2024-02-20 07:55:56 -0500
+Processing by VideoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "video"=>{"name"=>"sample123retetrt", "video"=>#<ActionDispatch::Http::UploadedFile:0x00007fa66c561598 @tempfile=#<Tempfile:/tmp/RackMultipart20240220-26968-1mby1po.mp4>, @original_filename="sample.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[video]\"; filename=\"sample.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Upload Video"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mVideo Create (0.7ms)[0m  [1m[32mINSERT INTO "videos" ("name", "video", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sample123retetrt"], ["video", "sample.mp4"], ["created_at", "2024-02-20 12:55:56.796274"], ["updated_at", "2024-02-20 12:55:56.796274"]]
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/video_controller.rb:53:in `transcode_and_upload_video'
+  [1m[36mVideo Update (0.7ms)[0m  [1m[33mUPDATE "videos" SET "updated_at" = $1, "s3_url" = $2 WHERE "videos"."id" = $3[0m  [["updated_at", "2024-02-20 12:56:04.291724"], ["s3_url", "https://gcc-vault-staging.s3.amazonaws.com/output.mp4"], ["id", 28]]
+  ↳ app/controllers/video_controller.rb:53:in `transcode_and_upload_video'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/video_controller.rb:53:in `transcode_and_upload_video'
+Redirected to http://localhost:3000/video/28
+Completed 302 Found in 7505ms (ActiveRecord: 4.7ms | Allocations: 193927)
+
+
+Started GET "/video/28" for ::1 at 2024-02-20 07:56:04 -0500
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mVideo Load (0.6ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/video_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering video/show.html.erb within layouts/application
+  Rendered video/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 3000)
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.6ms | Allocations: 4069)
+
+

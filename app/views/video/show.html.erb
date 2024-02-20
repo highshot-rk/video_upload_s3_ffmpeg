@@ -1,0 +1,5 @@
+<link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet" />
+<video id="my-video" class="video-js" controls preload="auto" width="640" height="360" data-setup="{}">
+  <source src="<%= @video.s3_url %>" type='video/mp4'>
+</video>
+<script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
